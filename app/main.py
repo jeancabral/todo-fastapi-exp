@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.todo import todo_resource
 
 app = FastAPI()
 
@@ -9,4 +10,6 @@ async def root():
 
 def build_api():
     """Build API"""
+    app.include_router(todo_resource.router, prefix="/todo", tags=["todo"])
+
     return app
