@@ -1,4 +1,10 @@
 from typing import List, Dict, Any
+from enum import Enum
+
+class StatusOptions(str, Enum):
+  not_completed = "Não concluído"
+  doing = "Fazendo"
+  done = "Feito"
 
 class Todos:
   todo: List[Dict[str, Any]] = [
@@ -6,7 +12,7 @@ class Todos:
       "id": 1, 
       "title": "Estudar Python", 
       "description": "Cap 3 do Fluente Python", 
-      "status": "a fazer"
+      "status": StatusOptions.not_completed
     }
   ]
 
