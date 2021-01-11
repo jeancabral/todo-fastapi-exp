@@ -25,8 +25,6 @@ def todo_helper(todo) -> dict:
     }
 
 # Retrieve all todos
-
-
 async def get_all_todos():
     todos = []
     async for todo in todo_collection.find():
