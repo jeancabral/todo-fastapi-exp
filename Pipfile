@@ -4,12 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastapi = "*"
-uvicorn = "*"
-pydantic = "*"
-motor = "*"
+fastapi = "0.61.1"
+uvicorn  = "0.11.8"
+motor = "2.2.0"
+python-decouple = "3.3"
+dnspython = "*"
+requests = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.9"
