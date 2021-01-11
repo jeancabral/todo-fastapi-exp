@@ -23,6 +23,19 @@ class TodoItem(BaseModel):
             }
         }
 
+class TodoItemUpdate(BaseModel):
+    title: Optional[str]
+    description: Optional[str]
+    status: Optional[StatusOptions]
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "title": "Some Title",
+                "description": "Describe your todo",
+                "status": "Feito",
+            }
+        }
 
 class TodoItemResponse(BaseModel):
     id: int
